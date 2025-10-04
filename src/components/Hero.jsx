@@ -1,6 +1,7 @@
 // src/components/Hero.jsx
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import yourPhoto from "../assets/yourphoto.jpg"; // ✅ import your photo properly
 
 export default function Hero({ darkMode, setDarkMode }) {
   const texts = ["Aspiring Software Developer", "Java Enthusiast", "Linux Learner"];
@@ -9,7 +10,7 @@ export default function Hero({ darkMode, setDarkMode }) {
   const [deleting, setDeleting] = useState(false);
   const [blink, setBlink] = useState(true);
 
-  // Typing logic (smooth + complete)
+  // Typing logic
   useEffect(() => {
     if (index >= texts.length) return;
 
@@ -57,7 +58,7 @@ export default function Hero({ darkMode, setDarkMode }) {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 via-blue-900/20 to-purple-900/20 animate-gradient" />
 
-      {/* Left side content */}
+      {/* Left content */}
       <motion.div
         className="flex-1 space-y-6 relative z-10"
         variants={container}
@@ -133,7 +134,7 @@ export default function Hero({ darkMode, setDarkMode }) {
           }`}
         >
           <img
-            src="/yourphoto.jpg"
+            src={yourPhoto} // ✅ now works both locally and on GitHub Pages
             alt="Dhruva"
             className="w-full h-full object-cover"
           />

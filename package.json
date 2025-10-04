@@ -1,6 +1,6 @@
 {
   "name": "dhruva-protoflio",
-  "homepage": "https://Dhruva-java.github.io/portfolio",
+  "homepage": " https://dhruva-java.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,6 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.14",
